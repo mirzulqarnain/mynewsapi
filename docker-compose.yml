@@ -1,0 +1,9 @@
+services:
+  news-api:
+    build: .
+    image: zulmir/mynewsapi:1.0
+    container_name: newsapi
+    ports:
+      - "7000:7000"
+    shm_size: "1gb"
+    restart: unless-stopped
